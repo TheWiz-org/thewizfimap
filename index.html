@@ -36,7 +36,7 @@
             </style>
         
 </head>
-<body onload="getLocation()">
+<body onload="getLocation()" >
     
     
             <div class="folium-map" id="map_bed2c959d070cf976f090ef35dd21ada" ></div>
@@ -44,8 +44,7 @@
 </body>
 <script>
     
-    
-            function getLocation() {
+   function getLocation() {
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
       } else {
@@ -63,7 +62,7 @@
         zoom: 13,
         zoomControl: true,
         preferCanvas: false,
-      });
+      );
 
             
 
