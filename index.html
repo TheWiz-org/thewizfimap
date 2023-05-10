@@ -44,6 +44,11 @@
       var popup = L.popup().setContent(
         "your location"
       );
+      var marker = L.marker([23.37987, 85.335715]).addTo(map);
+
+      var popup = L.popup().setContent(
+        "ssid:a8:da:0c:86:31:f5 ssid:JioFiber-LAGuB_5G password:asdf1234"
+      );
 
       marker.bindPopup(popup).openPopup();
     }
