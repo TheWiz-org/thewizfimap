@@ -36,7 +36,7 @@
             </style>
         
 </head>
-<body>
+<body onload="getLocation()">
     
     
             <div class="folium-map" id="map_bed2c959d070cf976f090ef35dd21ada" ></div>
@@ -45,16 +45,25 @@
 <script>
     
     
-            var map_bed2c959d070cf976f090ef35dd21ada = L.map(
-                "map_bed2c959d070cf976f090ef35dd21ada",
-                {
-                    center: [23.37987, 85.335715],
-                    crs: L.CRS.EPSG3857,
-                    zoom: 13,
-                    zoomControl: true,
-                    preferCanvas: false,
-                }
-            );
+            function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+
+    function showPosition(position) {
+      var latitude = position.coords.latitude;
+      var longitude = position.coords.longitude;
+
+      var map_ee55a493b157f66672a8d0e2c1ce12ae = L.map("map_ee55a493b157f66672a8d0e2c1ce12ae", {
+        center: [latitude, longitude],
+        crs: L.CRS.EPSG3857,
+        zoom: 13,
+        zoomControl: true,
+        preferCanvas: false,
+      });
 
             
 
