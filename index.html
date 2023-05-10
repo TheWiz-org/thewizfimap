@@ -42,7 +42,7 @@
       var marker = L.marker([latitude, longitude]).addTo(map);
 
       var popup = L.popup().setContent(
-        "Latitude: " + latitude.toFixed(4) + "<br>Longitude: " + longitude.toFixed(4)
+        "your location"
       );
 
       marker.bindPopup(popup).openPopup();
