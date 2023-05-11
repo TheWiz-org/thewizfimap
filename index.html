@@ -43,9 +43,16 @@
       var marker = L.marker([23.37987, 85.335715]).addTo(map);
 
       var popup = L.popup().setContent(
-        "ssid:a8:da:0c:86:31:f5 ssid:JioFiber-LAGuB_5G password:asdf1234"
+        "ssid:a8:da:0c:86:31:f5 bssid:JioFiber-LAGuB_5G password:asdf1234"
       );
       marker.bindPopup(popup).openPopup();
+      var marker = L.marker([24.5145345098039, 86.6449871568628]).addTo(map);
+
+      var popup = L.popup().setContent(
+        "ssid:a0:47:d7:25:d4:c8 bssid:a0:47:d7:25:d4:c8 password:not found yet"
+      );
+      marker.bindPopup(popup).openPopup();
+
       var marker = L.marker([latitude, longitude]).addTo(map);
 
       var popup = L.popup().setContent(
